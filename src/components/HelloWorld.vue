@@ -1,58 +1,53 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+<Gallery :images="images" ></Gallery>
 </template>
 
 <script>
+import Gallery from "vue-cover-gallery"
 export default {
   name: 'HelloWorld',
+  data() {
+    return { 
+      images: [ 
+         {
+            title: "Moon hill bridge",
+            href: "https://image.redbull.com/rbcom/010/2015-07-27/1331737542701_2/0010/1/1500/1000/1/moon-hill-natural-bridge-in-china.jpg"},
+            
+            {
+            title: "The sunset",
+            href: "http://cphpost.dk/wp-content/uploads/2019/05/forest-1950402__340.jpg"
+            },
+                {
+            title: "Blissful night in the dessert",
+            href: "https://mysticjaisalmer.com/wp-content/uploads/2018/01/blissful-night-in-the-desert-of-thar-1024x798.jpg"},
+            {
+             title: "The sunset",
+            href: "https://www.digitalcare.org/wp-content/uploads/2016/11/Free-Desktop-Wallpaper-feature.jpg"
+            },
+                {
+            title: "Ocean view from sky",
+            description: "",
+            href: "https://croatia.hr/sites/default/files/2017-08/00_nature_0.jpg"},
+            {
+             title: "Ocean view",
+            href: "http://neulabs-wpengine.netdna-ssl.com/wp-content/uploads/2014/01/nature-05-700x1050.jpg"
+            },
+                 {
+            title: "Beautiful mountain",
+            href: "http://ghettojuice.wdfiles.com/local--files/file:clark-little/clark-little.jpg"},
+     ],
+    }
+  },
   props: {
     msg: String
+  },components:{
+    Gallery
   }
 }
 </script>
 
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style >
+
 </style>

@@ -1,0 +1,4 @@
+1 run build -> npm run build
+2 run deploy -> firebase deploy
+git name -> amemfe
+** publish all in the dist foder as single page application
